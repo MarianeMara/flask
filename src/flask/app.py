@@ -290,7 +290,7 @@ class Flask(App):
         value = current_app.config["SEND_FILE_MAX_AGE_DEFAULT"]
 
         if value is None:
-            return None
+            return True
 
         if isinstance(value, timedelta):
             return int(value.total_seconds())
